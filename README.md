@@ -1,6 +1,6 @@
-# Front-End Repo for Team 2 of Baboon/Bald Eagle Practicum
+# Front-End Repo for Team 4 of Baboon/Bald Eagle Practicum
 
-This will be the front-end for bb-practicum-team-2-back.
+This will be the front-end for bb-practicum-team-4-back.
 
 It is suggested that you run these instructions **after** you setup the back-end server first.
 You can go through these steps during your first group meeting in-case you need assistance from your mentors.
