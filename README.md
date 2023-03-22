@@ -1,6 +1,7 @@
-# BB Practicum Team 4 Front-end
 
-This is the front-end repository for the BB Practicum Team 4 project. 
+# Front-End Repo for Team 4 of Baboon/Bald Eagle Practicum
+
+This will be the front-end for bb-practicum-team-4-back.
 
 - Make sure to set up the back-end server first by following the instructions in the [back-end README](https://github.com/Code-the-Dream-School/bb-practicum-team-4-back/blob/readme/README.md).
 
@@ -46,4 +47,3 @@ Navigate to `http://localhost:3000`
 - After an order is placed it automatically goes into “completed” status
 - A logged in user is able to access order history
 - User should not be able to access order history if not logged in
-
