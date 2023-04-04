@@ -27,13 +27,13 @@ const fetchData = async (url, method, body) => {
   fetch(url, {
     method: method,
     headers: {
-        "Content-Type": "application/json",
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(body),
   })
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
-}
+    .then((response) => response.text())
+    .then((result) => console.log(result))
+    .catch((error) => console.log("error", error));
+};
 
 export { BASEAUTHURL, getData, getAllData, fetchData };
