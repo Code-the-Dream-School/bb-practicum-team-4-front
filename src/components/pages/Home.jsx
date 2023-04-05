@@ -1,11 +1,4 @@
 import { Catalog } from "../Catalog";
-// import { OurUniqueFeatures } from "../OurUniqueFeatures";
-// import upper from "../../images/upper_main.svg";
-// import skyski from "../../images/skyski.svg";
-// import build from "../../images/webuild.svg";
-// import line from "../../images/icons/line.svg";
-
-
 
 export const Home = () => {
 	return (
