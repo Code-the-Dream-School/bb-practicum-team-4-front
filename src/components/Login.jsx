@@ -1,13 +1,17 @@
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import { Fragment, useState } from "react";
-import loginImage from "../images/login.jpg";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../scss/_login.scss";
+import { Register } from "./Register";
 export const Login = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
+  const [register, setRegister] = useState("hide");
+  const [registerActive, setRegisterActive] = useState("");
+  const [loginActive, setLoginActive] = useState("active");
+  const [login, setLogin] = useState("show");
   const loginSchema = Yup.object().shape({
     email: Yup.string()
       .email(`Email is Incorrect!`)
@@ -37,18 +41,51 @@ export const Login = () => {
     },
   });
 
+  const showLoginDiv = () => {
+    setLogin("show");
+    setRegister("hide");
+    setLoginActive("active");
+    setRegisterActive("");
+  };
+  const showRegisterDiv = () => {
+    setRegister("show");
+    setLogin("hide");
+    setLoginActive("");
+    setRegisterActive("active");
+  };
   return (
     <Fragment>
-      <div className="" id="container">
-        <div className="form-container sign-in-container">
-          <form onSubmit={formik.handleSubmit} noValidate>
-            <h1>Sign in</h1>
-            <h1 className="text-danger">{formik.status}</h1>
+      <div className="main">
+        <div className="tab-btn">
+          <a
+            href="#"
+            onClick={showLoginDiv}
+            className={`login-tab ${loginActive}`}
+          >
+            Sign In
+          </a>
+          <a
+            href="#"
+            onClick={showRegisterDiv}
+            className={`register-tab ${registerActive}`}
+          >
+            Sign Up
+          </a>
+        </div>
+        <div className={`login-box ${login}`}>
+          <form
+            onSubmit={formik.handleSubmit}
+            noValidate
+            autoComplete="false"
+            id="login-form"
+          >
             <input
               type="email"
               {...formik.getFieldProps("email")}
               className={
-                formik.touched.email && formik.errors.email ? "is-invalid" : ""
+                formik.touched.email && formik.errors.email
+                  ? "inp is-invalid"
+                  : "inp "
               }
               placeholder="Email"
             />
@@ -60,8 +97,8 @@ export const Login = () => {
               {...formik.getFieldProps("password")}
               className={
                 formik.touched.password && formik.errors.password
-                  ? "is-invalid"
-                  : ""
+                  ? "inp is-invalid"
+                  : "inp "
               }
               placeholder="Password"
             />
@@ -69,21 +106,19 @@ export const Login = () => {
               <span className="alert-text">{formik.errors.password}</span>
             )}
             <button
-              className="site-btn-login"
+              className="sub-btn"
               disabled={formik.isSubmitting || !formik.isValid}
             >
-              {!loading && "SIGN IN"}
+              {!loading && "CONTINUE"}
               {loading && "Please Wait..."}
             </button>
-            <a href="#">Forgot your password?</a>
           </form>
+          <a href="#" id="forgot" className="mt-3 fs-3 text-primary">
+            Resset Your Password
+          </a>
         </div>
-        <div className="overlay-container">
-          <div className="overlay">
-            <div className="overlay-panel overlay-right">
-              <img src={loginImage} className="login-image" />
-            </div>
-          </div>
+        <div className={`register-box ${register}`}>
+          <Register />
         </div>
       </div>
     </Fragment>
