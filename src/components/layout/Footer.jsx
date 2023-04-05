@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ExternalLink } from "react-external-link";
 import twitter from "../../images/icons/twitter.svg";
 import youtube from "../../images/icons/youtube.svg";
 import dribbble from "../../images/icons/dribbble.svg";
@@ -30,7 +29,7 @@ export const Footer = () => {
 							</button>
 						</form>
 						<div>
-							<div className="footer__social-icons">
+							{/* <div className="footer__social-icons">
 								<ExternalLink
 									className="footer__social-link1"
 									href="https://instagram.com/"
@@ -71,7 +70,7 @@ export const Footer = () => {
 										alt="Youtube"
 									/>
 								</ExternalLink>
-							</div>
+							</div> */}
 						</div>
 					</div>
 				</div>
