@@ -1,5 +1,15 @@
 @import "reset";
+@import "variables";
 @import "commons";
 
-@import "header";
-@import "footer";
+@import "utils/accordion";
+@import "utils/button";
+@import "utils/form";
+@import "utils/product";
+
+@import "layout/wrapper";
+@import "layout/account";
+@import "layout/footer";
+@import "layout/header";
+@import "layout/catalog";
+@import "layout/footer";
