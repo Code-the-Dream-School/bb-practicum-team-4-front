@@ -3,8 +3,9 @@ import { useFormik } from "formik";
 import { Fragment, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "../scss/_login.scss";
 import { Register } from "./Register";
+import loginImage from "../../src/images/login.jpg";
+
 export const Login = () => {
 	const navigate = useNavigate();
 	const [loading, setLoading] = useState(false);
@@ -60,83 +61,88 @@ export const Login = () => {
 	};
 	return (
 		<Fragment>
-			<div className="main">
-				<div className="tab-btn">
-					<a
-						href="#"
-						onClick={showLoginDiv}
-						className={`login-tab ${loginActive}`}
-					>
-						Sign In
-					</a>
-					<a
-						href="#"
-						onClick={showRegisterDiv}
-						className={`register-tab ${registerActive}`}
-					>
-						Sign Up
-					</a>
-				</div>
-				<div className={`login-box ${login}`}>
-					<form
-						onSubmit={formik.handleSubmit}
-						noValidate
-						autoComplete="false"
-						id="login-form"
-					>
-						<input
-							type="email"
-							{...formik.getFieldProps("email")}
-							className={
-								formik.touched.email && formik.errors.email
-									? "inp is-invalid"
-									: "inp "
-							}
-							placeholder="Email"
-						/>
-						{formik.touched.email &&
-							formik.errors.email && (
-								<span className="alert-text">
-									{formik.errors.email}
-								</span>
-							)}
-						<input
-							type="password"
-							{...formik.getFieldProps("password")}
-							className={
-								formik.touched.password &&
-								formik.errors.password
-									? "inp is-invalid"
-									: "inp "
-							}
-							placeholder="Password"
-						/>
-						{formik.touched.password &&
-							formik.errors.password && (
-								<span className="alert-text">
-									{formik.errors.password}
-								</span>
-							)}
-						<button
-							className="sub-btn"
-							disabled={
-								formik.isSubmitting || !formik.isValid
-							}
+			<div
+			//style={{ backgroundImage: `url(${loginImage})` }}
+			>
+				<div className="main">
+					<div className="tab-btn">
+						<a
+							href="#"
+							onClick={showLoginDiv}
+							className={`login-tab ${loginActive}`}
 						>
-							{!loading && "CONTINUE"}
-							{loading && "Please Wait..."}
-						</button>
-					</form>
-					<a
-						href="#"
-						id="forgot"
-						className="mt-3 fs-3 text-primary"
-					>
-						Resset Your Password
-					</a>
-				</div>
-				<div className={`register-box ${register}`}>
-					<Register />
+							Sign In
+						</a>
+						<a
+							href="#"
+							onClick={showRegisterDiv}
+							className={`register-tab ${registerActive}`}
+						>
+							Sign Up
+						</a>
+					</div>
+					<div className={`login-box ${login}`}>
+						<form
+							onSubmit={formik.handleSubmit}
+							noValidate
+							autoComplete="false"
+							id="login-form"
+						>
+							<input
+								type="email"
+								{...formik.getFieldProps("email")}
+								className={
+									formik.touched.email &&
+									formik.errors.email
+										? "inp is-invalid"
+										: "inp "
+								}
+								placeholder="Email"
+							/>
+							{formik.touched.email &&
+								formik.errors.email && (
+									<span className="alert-text">
+										{formik.errors.email}
+									</span>
+								)}
+							<input
+								type="password"
+								{...formik.getFieldProps("password")}
+								className={
+									formik.touched.password &&
+									formik.errors.password
+										? "inp is-invalid"
+										: "inp "
+								}
+								placeholder="Password"
+							/>
+							{formik.touched.password &&
+								formik.errors.password && (
+									<span className="alert-text">
+										{formik.errors.password}
+									</span>
+								)}
+							<button
+								className="sub-btn"
+								disabled={
+									formik.isSubmitting || !formik.isValid
+								}
+							>
+								{!loading && "CONTINUE"}
+								{loading && "Please Wait..."}
+							</button>
+						</form>
+						<a
+							href="#"
+							id="forgot"
+							className="mt-3 fs-3 text-primary"
+						>
+							Resset Your Password
+						</a>
+					</div>
+					<div className={`register-box ${register}`}>
+						<Register />
+					</div>
 				</div>
 			</div>
 		</Fragment>

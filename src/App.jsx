@@ -13,6 +13,7 @@ import { ChangePassword } from "./components/pages/account/ChangePassword";
 import { NotFound } from "./components/pages/NotFound";
 import { Login } from "./components/Login";
 import { Register } from "./components/Register";
+import PublicLayout from "./components/PubliLaout";
 function App() {
 	return (
 		<BrowserRouter>
@@ -22,9 +23,8 @@ function App() {
 					<Route path="/home" element={<Home />} />
 					<Route path="/about" element={<About />} />
 					<Route path="/account" element={<Account />} />
-					<Route path="/login" element={<Login />} />
 					<Route path="/logout" element={<Logout />} />
-					<Route path="/register" element={<Register />} />
+
 					<Route
 						path="/delete-account"
 						element={<DeleteAccount />}
@@ -34,6 +34,11 @@ function App() {
 						element={<ChangePassword />}
 					/>
 					<Route path="*" element={<NotFound />} />
+				</Route>
+				<Route element={<PublicLayout />}>
+					<Route path="/login" element={<Login />} />
+
+					<Route path="/register" element={<Register />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

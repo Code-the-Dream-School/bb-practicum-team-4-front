@@ -7,6 +7,7 @@ import search from "../../../images/icons/search.svg";
 import cart from "../../../images/icons/cart.svg";
 import account from "../../../images/icons/account.svg";
 import language from "../../../images/icons/language.svg";
+import login from "../../../../src/images/icons/login.svg";
 
 export const Header = () => {
 	const [openMobileMenu, setOpenMobileMenu] =
@@ -91,6 +92,16 @@ export const Header = () => {
 						<img
 							className="nav__navigate-account"
 							src={account}
+							alt="account"
+						/>
+					</NavLink>
+					<NavLink
+						activeClassName="nav__nav-link--active"
+						to={"/login"}
+					>
+						<img
+							className="nav__navigate-account"
+							src={login}
 							alt="account"
 						/>
 					</NavLink>
