@@ -4,8 +4,6 @@ import { Fragment, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Register } from "./Register";
-import loginImage from "../../src/images/login.jpg";
-
 export const Login = () => {
 	const navigate = useNavigate();
 	const [loading, setLoading] = useState(false);
