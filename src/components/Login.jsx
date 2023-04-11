@@ -31,17 +31,24 @@ export const Login = () => {
 			{ setStatus, setSubmitting }
 		) => {
 			setLoading(true);
-			axios
-				.post("login")
-				.then((res) => {
-					localStorage.setItem("API_TOKEN", res.token);
-					navigate("/");
-				})
-				.catch((error) => {
-					console.log(error);
-					setLoading(false);
-					setStatus(`Your Login Information Incorrect!`);
-				});
+			try {
+				const response = await axios.post(
+					"http://localhost:8000/api/v1/auth/login",
+					{
+						email: values.email,
+						password: values.password,
+					}
+				);
+				localStorage.setItem(
+					"API_TOKEN",
+					response.data.token
+				);
+				navigate("/");
+			} catch (error) {
+				setStatus(false);
+				setSubmitting(false);
+				console.log(error);
+			}
 		},
 	});
 
@@ -121,6 +128,7 @@ export const Login = () => {
 									</span>
 								)}
 							<button
+								type="submit"
 								className="sub-btn"
 								disabled={
 									formik.isSubmitting || !formik.isValid

@@ -37,7 +37,6 @@ function App() {
 				</Route>
 				<Route element={<PublicLayout />}>
 					<Route path="/login" element={<Login />} />
-
 					<Route path="/register" element={<Register />} />
 				</Route>
 			</Routes>
