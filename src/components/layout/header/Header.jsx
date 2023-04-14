@@ -93,15 +93,8 @@ export const Header = () => {
 							alt="account"
 						/>
 					</NavLink>
-					<NavLink
-						activeClassName="nav__nav-link--active"
-						to={"/login"}
-					>
-						<img
-							className="nav__navigate-account"
-							src={login}
-							alt="account"
-						/>
+					<NavLink className="nav__link" to={"/login"}>
+						<p>login</p>
 					</NavLink>
 				</div>
 			</nav>

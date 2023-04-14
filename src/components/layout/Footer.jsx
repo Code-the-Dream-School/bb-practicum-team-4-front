@@ -30,7 +30,7 @@ export const Footer = () => {
 							</button>
 						</form>
 						<div>
-							{/* <div className="footer__social-icons">
+							<div className="footer__social-icons">
 								<ExternalLink
 									className="footer__social-link1"
 									href="https://instagram.com/"
@@ -71,7 +71,7 @@ export const Footer = () => {
 										alt="Youtube"
 									/>
 								</ExternalLink>
-							</div> */}
+							</div>
 						</div>
 					</div>
 				</div>
