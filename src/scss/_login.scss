@@ -5,7 +5,7 @@
 	justify-content: center;
 	align-items: center;
 	display: block;
-	margin-left: auto;
+	margin-left: 10%;
 	margin-right: auto;
 	margin-top: 10%;
 	margin-bottom: 10px;
@@ -125,18 +125,18 @@ label {
 	font-size: 1.5rem;
 }
 .backgroundImage {
-	background-image: url("../images/loginBackground.jpg");
+	background-image: url("../images/login.png");
 	background-repeat: no-repeat;
 	background-size: contain;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	min-height: 100%;
+	min-height: 90%;
 	min-width: 1024px;
 	/* Set up proportionate scaling */
 	width: 100%;
-	height: auto;
+	height: 100%;
 	/* Set up positioning */
 	position: fixed;
 	top: 0;
