@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { ExternalLink } from "react-external-link";
 import twitter from "images/icons/twitter.svg";
 import youtube from "images/icons/youtube.svg";

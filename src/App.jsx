@@ -36,7 +36,7 @@ function App() {
 					<Route path="/shop" element={<Shop />} />
 					<Route path="/login" element={<Login />} />
 					<Route path="/logout" element={<Logout />} />
-					<Route path="/register" element={<Register />} />
+
 					<Route
 						path="/delete-account"
 						element={<DeleteAccount />}
@@ -46,6 +46,10 @@ function App() {
 						element={<ChangePassword />}
 					/>
 					<Route path="*" element={<NotFound />} />
+				</Route>
+				<Route element={<PublicLayout />}>
+					<Route path="/login" element={<Login />} />
+					<Route path="/register" element={<Register />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>
