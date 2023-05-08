@@ -15,7 +15,7 @@ export const Home = () => {
 			<div className="our-unique-features">
 				<OurUniqueFeatures />
 			</div>
-			<div className="wrapper">
+			<div className="wrapper" id='products'>
 				{/* not sure if i should use h1, h2, or h3 here */}
 				<Catalog />
 			</div>

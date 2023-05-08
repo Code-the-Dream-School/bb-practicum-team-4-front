@@ -14,9 +14,12 @@ export const TopScreen = () => {
 					We build only the best, customized to your
 					exacting demands
 				</h2>
-				<button className="top-screen__button">
-					SHOP NOW
-				</button>
+				<a href="#products">
+					<button className="top-screen__button" onclick="location.href='#products'">
+						SHOP NOW
+					</button>
+				</a>
+
 			</div>
 		</div>
 	);
