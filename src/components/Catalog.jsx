@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { BASEURL } from "api/index";
 import { Loader } from "components/icons/Loader";
 import { ProductCard } from "components/ProductCard.jsx";
-// import { Button } from "utils/Button";
 
 const categories = [
 	{ name: "All", value: "all" },
@@ -19,9 +18,6 @@ export const Catalog = () => {
 	const BASEPRODUCTSURL = BASEURL + "products";
 	const [selectedCategory, setSelectedCategory] =
 		useState("all");
-
-	// console.log("selectedCategory ===> ", selectedCategory);
-	// console.log("products ===> ", products);
 
 	const handleClick = (category) => {
 		setSelectedCategory(category);
@@ -44,13 +40,10 @@ export const Catalog = () => {
 		})
 			.then((response) => response.text())
 			.then((result) => {
-				// console.log("products ====> ", products);
 				setProducts([...JSON.parse(result).products]);
 			})
 			.catch((errorResponse) => {
 				setError(errorResponse);
-				// console.log("errorResponse ===> ", errorResponse);
-				// console.log("error ===> ", error);
 			});
 	}, []);
 	/* eslint-disable react-hooks/exhaustive-deps */
@@ -66,7 +59,6 @@ export const Catalog = () => {
 			<h2 className="catalog-header-container__title">
 				Our Most Popular Board category
 			</h2>
-			{/* <SwitchCategory products={products} /> */}
 			<div className="catalog__filters">
 				{categories.map((category) => (
 					<button
