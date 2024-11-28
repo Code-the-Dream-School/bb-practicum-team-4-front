@@ -102,7 +102,6 @@ export const Catalog = () => {
 				) : (
 					<div className="loader-container">
 						<Loader />
-						{/* <p>load</p> */}
 					</div>
 				)}
 			</div>
