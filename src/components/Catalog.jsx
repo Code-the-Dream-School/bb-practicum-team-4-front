@@ -59,7 +59,6 @@ export const Catalog = () => {
 			<h2 className="catalog-header-container__title">
 				Our Most Popular Board category
 			</h2>
-			{/* <SwitchCategory products={products} /> */}
 			<div className="catalog__filters">
 				{categories.map((category) => (
 					<button
