@@ -40,7 +40,6 @@ export const Catalog = () => {
 		})
 			.then((response) => response.text())
 			.then((result) => {
-				// console.log("products ====> ", products);
 				setProducts([...JSON.parse(result).products]);
 			})
 			.catch((errorResponse) => {
