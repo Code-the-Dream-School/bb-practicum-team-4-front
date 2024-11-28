@@ -44,7 +44,6 @@ export const Catalog = () => {
 			})
 			.catch((errorResponse) => {
 				setError(errorResponse);
-				// console.log("errorResponse ===> ", errorResponse);
 			});
 	}, []);
 	/* eslint-disable react-hooks/exhaustive-deps */
