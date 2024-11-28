@@ -105,7 +105,6 @@ export const Catalog = () => {
 					</div>
 				)}
 			</div>
-			{/* {productsRender} */}
 			{/* <Button /> */}
 		</div>
 	);
